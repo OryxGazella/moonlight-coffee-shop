@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Moonlight Coffee Shop</title>
+    <style type="text/css">
+        /*Solarized dark
+        Base 03 #002b36
+        Base 02 #073642
+
+        Content, lightest to darkest
+        Base1 #93a1a1
+        Base0 #839496
+        Base00 #657b83
+        Base01 #586e75
+
+        Colors
+        $yellow:    #b58900;
+        $orange:    #cb4b16;
+        $red:       #dc322f;
+        $magenta:   #d33682;
+        $violet:    #6c71c4;
+        $blue:      #268bd2;
+        $cyan:      #2aa198;
+        $green:     #859900;
+        */
+        header {
+            text-align: center;
+            background-color: #073642;
+        }
+
+        html {
+            background-color: #002b36;
+            color: #93a1a1;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .flex-container {
+            margin: 0;
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            flex-flow: row wrap;
+            padding: 0 0 10px;
+        }
+
+        .flex-item {
+            background: #073642;
+            width: 200px;
+            height: 150px;
+            padding: 10px;
+            margin-top: 10px;
+
+            line-height: 150px;
+            font-weight: bold;
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        .flex-item:hover {
+            background: #dc322f;
+            cursor: grab;
+        }
+
+        #menu > li > span.product-name {
+            float: left;
+        }
+
+        #menu > li > span.product-price {
+            float: right;
+        }
+
+        button {
+            border: none;
+            color: #93a1a1;
+
+        }
+
+        #orderSummary {
+            text-align: center;
+            font-size: 2em;
+        }
+
+        #orderSummary > li > span.product-name {
+        }
+
+        #orderSummary > li > span.product-price {
+        }
+
+        #orderSummary > li > span.multiply {
+            color: #6c71c4;
+        }
+
+        #orderSummary > li > span.subtotal {
+            float: right;
+            padding-right: 20px;
+            color: #cb4b16;
+        }
+
+        #orderSummary > li > span.total-amount {
+            float: right;
+            padding-right: 20px;
+            color: #dc322f;
+        }
+
+        #orderSummary > li {
+            border-bottom: 1px solid #268bd2;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Moonlight Coffee Shop</h1>
+</header>
+<hr/>
+
+<ul id="menu" class="flex-container">
+    <li class="flex-item"><span class="product-name">Remove</span><span class="product-price">R 0.00</span></li>
+    <li class="flex-item"><span class="product-name">these</span><span class="product-price">R 0.00</span></li>
+    <li class="flex-item"><span class="product-name">and</span><span class="product-price">R 0.00</span></li>
+    <li class="flex-item"><span class="product-name">populate</span><span class="product-price">R 0.00</span></li>
+    <li class="flex-item"><span class="product-name">via</span><span class="product-price">R 0.00</span></li>
+    <li class="flex-item"><span class="product-name">JavaScript</span><span class="product-price">R 0.00</span></li>
+    <li class="flex-item"><span class="product-name">Caffe Latte</span><span class="product-price">R 29.50</span></li>
+    <li class="flex-item"><span class="product-name">Caffe Mocha</span><span class="product-price">R 29.50</span></li>
+</ul>
+
+<hr/>
+<header>
+    <h1>Order summary</h1>
+</header>
+
+<ul id="orderSummary">
+    <li><span class="product-name">Caffe Latte (R 29.50)</span> <span class="multiply">x</span> <span class="item-quantity">2</span>  <span class="subtotal">R 59.00</span></li>
+    <li><span class="product-name">Caffe Mocha (R 105.00)</span> <span class="multiply">x</span> <span class="item-quantity">3</span>  <span class="subtotal">R 105.00</span></li>
+    <li><span class="total">Grand total</span>  <span class="total-amount">R 164.00</span></li>
+</ul>
+
+<form>
+    <div class="flex-container">
+        <button class="flex-item">Cancel</button>
+        <button class="flex-item">Cash</button>
+        <button class="flex-item">Card</button>
+    </div>
+</form>
+
+</body>
+</html>
