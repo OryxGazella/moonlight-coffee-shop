@@ -91,9 +91,6 @@
         #orderSummary > li > span.product-name {
         }
 
-        #orderSummary > li > span.product-price {
-        }
-
         #orderSummary > li > span.multiply {
             color: #6c71c4;
         }
@@ -121,16 +118,7 @@
 </header>
 <hr/>
 
-<ul id="menu" class="flex-container">
-    <li class="flex-item"><span class="product-name">Remove</span><span class="product-price">R 0.00</span></li>
-    <li class="flex-item"><span class="product-name">these</span><span class="product-price">R 0.00</span></li>
-    <li class="flex-item"><span class="product-name">and</span><span class="product-price">R 0.00</span></li>
-    <li class="flex-item"><span class="product-name">populate</span><span class="product-price">R 0.00</span></li>
-    <li class="flex-item"><span class="product-name">via</span><span class="product-price">R 0.00</span></li>
-    <li class="flex-item"><span class="product-name">JavaScript</span><span class="product-price">R 0.00</span></li>
-    <li class="flex-item"><span class="product-name">Caffe Latte</span><span class="product-price">R 29.50</span></li>
-    <li class="flex-item"><span class="product-name">Caffe Mocha</span><span class="product-price">R 29.50</span></li>
-</ul>
+<ul id="menu" class="flex-container"></ul>
 
 <hr/>
 <header>
@@ -152,6 +140,23 @@
         <button class="flex-item">Card</button>
     </div>
 </form>
+<script type="text/javascript">
+    // <li class="flex-item"></li>
+    const products = [
+        {"name": "cappuccino", price: 20.00},
+        {"name": "caffe americano", price: 10.00},
+        {"name": "caffe latte", price: 20.00},
+        {"name": "caffe breve", price: 200.00},
+    ];
 
+
+    for (let product of products) {
+        let listItem = document.createElement('li');
+        listItem.setAttribute("class", "flex-item");
+        listItem.innerHTML = `<span class="product-name">${product.name}</span><span class="product-price">R ${product.price}</span>`;
+        document.getElementById("menu").appendChild(listItem)
+    }
+
+</script>
 </body>
 </html>
